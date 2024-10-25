@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html{
+  scroll-behavior: smooth !important;
+}
+body {
+  background-color: rgb(22, 22, 22);
+  color: white;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.144);
+}
+.logo {
+  font-size: 25px;
+  color: rgb(6, 131, 6);
+  text-decoration: none;
+  font-weight: 600;
+}
+.menu a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: 0.5s;
+}
+.menu a:hover {
+  color: rgb(6, 131, 6);
+  border-bottom: 1.8px solid rgb(6, 131, 6);
+}
+/* Tela Princial */
+.principal {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  padding: 0 10%;
+}
+.conteudo_principal {
+  width: 600px;
+}
+.conteudo_principal h1.start {
+  margin-top: 40px;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.conteudo_principal h1.nome {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(6, 131, 6);
+}
+.conteudo_principal h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(6, 131, 6);
+}
+.conteudo_principal p {
+  margin-top: -20px;
+  font-size: 16px;
+}
+    
+.main {
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  right: 20vh;
+  transform: translateY(-50%) rotateX(60deg) rotateZ(-30deg);
+  animation: rotate 20s infinite linear;
+}
+.circulo::before,
+.circulo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  background: rgba(3, 170, 3, 0.13);
+  box-sizing: border-box;
+  box-shadow: 0 0 40px 2px rgb(4, 117, 4);
+}
+.circulo::before {
+  transform: translateZ(-90px);
+}
+.circulo::after {
+  transform: translateZ(90px);
+}
+.circulo:nth-child(1) {
+  transform: rotateZ(0deg) rotateX(63.435deg);
+}
+.circulo:nth-child(2) {
+  transform: rotateZ(72deg) rotateX(63.435deg);
+}
+.circulo:nth-child(3) {
+  transform: rotateZ(144deg) rotateX(63.435deg);
+}
+.circulo:nth-child(4) {
+  transform: rotateZ(216deg) rotateX(63.435deg);
+}
+.circulo:nth-child(5) {
+  transform: rotateZ(288deg) rotateX(63.435deg);
+}
+.circulo:nth-child(6) {
+  transform: rotateZ(360deg) rotateX(63.435deg);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+.circulo {
+  box-shadow: 0 0 60px rgb(6, 131, 6), inset 0 0 60px rgba(6, 131, 6, 0.425);
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+/* Sobre Mim */
+.sec-sobre {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  padding: 0 10%;
+}
+.info {
+  width: 600px;
+}
+.profile {
+  border-radius: 20px;
+  margin-left: 5%;
+  margin-right: 120px;
+}
+/* Projetos */
+.projetos {
+  display: flex;
+  height: 100vh;
+ /* Alinha os itens em coluna */
+  align-items: center;      /* Centraliza horizontalmente */
+  padding: 0 10%;
+}
+
+.titulo_pr {
+  text-align: center;       /* Centraliza o texto do h1 */
+  margin-top: 20%;
+  margin-bottom: 20px;  
+  flex-direction: column;      /* Espaçamento abaixo do h1 para separar dos projetos */
+}
+
+.projeto_item {
+  display: flex;            /* Alinha a imagem e a descrição do projeto lado a lado */
+
+}
+/* Contato */
+.contato {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  padding: 0 10%;
+}
+.redes {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none; /* Remove bullets */
+}
+
+.redes li {
+  position: relative;
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  background-color: rgb(27, 27, 27);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.redes li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.redes li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px rgb(6, 131, 6);
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.redes li:hover {
+  background-color: rgb(6, 131, 6);
+}
+
+.redes li:hover:after {
+  opacity: 1;
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
+}
+
+.redes li:hover a {
+  color: #000;
+}
+
+/* Media Queries para Responsividade */
+@media screen and (max-width: 850px) {
+  .redes li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+  }
+
+  .redes li:after {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .redes li {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 1.8rem;
+  }
+
+  .redes li:after {
+    width: 50px;
+    height: 50px;
+  }
+}
+.form {
+  width: 340px;
+  height: 440px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(50vh - 220px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+.titulo {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+}
+input:focus {
+  border-bottom: 2px solid #78788c;
+}
+p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+button:hover {
+  background: #78788c;
+  color: #fff;
+}
+.barra {
+  content: "Hi";
+  position: absolute;
+  bottom: -65px;
+  right: -20px;
+  background: rgb(22, 22, 22);
+  color: #fff;
+  width: 320px;
+  padding: 16px 4px 16px 0;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 10px 10px 40px -14px #000;
+}
